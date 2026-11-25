@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow - To Do App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <header>
+        <div class="logo">
+            <span>✓</span>
+            TaskFlow
+        </div>
+
+        <button id="themeBtn" class="theme-btn">🌙</button>
+    </header>
+
+    <section class="welcome">
+        <h1>Manage Your Tasks</h1>
+        <p>Stay organized and get things done.</p>
+    </section>
+
+    <!-- Statistics -->
+    <section class="stats">
+
+        <div class="stat-card">
+            <h2 id="totalTasks">0</h2>
+            <p>Total Tasks</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="completedTasks">0</h2>
+            <p>Completed</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="pendingTasks">0</h2>
+            <p>Pending</p>
+        </div>
+
+    </section>
+
+    <!-- Add Task -->
+    <section class="task-form">
+
+        <h2>Add New Task</h2>
+
+        <input
+            type="text"
+            id="taskInput"
+            placeholder="What needs to be done?"
+        >
+
+        <div class="form-row">
+
+            <select id="priority">
+                <option value="Low">Low Priority</option>
+                <option value="Medium" selected>Medium Priority</option>
+                <option value="High">High Priority</option>
+            </select>
+
+            <input type="date" id="dueDate">
+
+        </div>
+
+        <button id="addBtn">+ Add Task</button>
+
+    </section>
+
+    <!-- Search -->
+    <section class="search-box">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="🔍 Search your tasks..."
+        >
+    </section>
+
+    <!-- Filters -->
+    <section class="filters">
+
+        <button class="filter-btn active" data-filter="all">
+            All
+        </button>
+
+        <button class="filter-btn" data-filter="active">
+            Active
+        </button>
+
+        <button class="filter-btn" data-filter="completed">
+            Completed
+        </button>
+
+    </section>
+
+    <!-- Task List -->
+    <section class="task-section">
+
+        <div class="section-heading">
+            <h2>My Tasks</h2>
+            <span id="taskCount">0 Tasks</span>
+        </div>
+
+        <div id="taskList"></div>
+
+        <div id="emptyState">
+            <div class="empty-icon">📋</div>
+            <h3>No Tasks Found</h3>
+            <p>Add a new task to get started!</p>
+        </div>
+
+    </section>
+
+    <footer>
+        Made with ❤️ | TaskFlow
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
